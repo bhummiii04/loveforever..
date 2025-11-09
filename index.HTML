@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Love Forever</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel = "stylesheet"  href = "style1.css">
+  
+</head>
+<body>
+  <!-- Translated quick links (you can keep or remove the URLs) -->
+  <a href="https://mp.weixin.qq.com/s/oxLqXBcLCT8ij67DjkW2kw" class="quick-link" title="Create">Create</a>
+  <a href="https://shop1619956412.v.weidian.com/?userid=1619956412&spider_token=2720" class="quick-link" title="More">More</a>
+  <a href="https://pan.quark.cn/s/3344d23e48a8" class="quick-link" title="Source Code">Code</a>
+  <a href="https://shop1619956412.v.weidian.com/?userid=1619956412&spider_token=2720" class="quick-link" title="Gift">Gift</a>
+
+  <div id="ui"></div>
+
+  <script>
+    // Create N floating “I love you” items (was multilingual; now all English)
+    const N = 100;     // adjust if you want fewer/more
+    const ui = document.getElementById('ui');
+
+    for (let i = 1; i <= N; i++) {
+      const love = document.createElement('div');
+      love.className = 'love';
+      love.style.setProperty('--i', i);
+
+      const h = document.createElement('div');
+      h.className = 'love_horizontal';
+
+      const v = document.createElement('div');
+      v.className = 'love_vertical';
+
+      const word = document.createElement('div');
+      word.className = 'love_word';
+      word.textContent = 'I love you';
+
+      v.appendChild(word);
+      h.appendChild(v);
+      love.appendChild(h);
+      ui.appendChild(love);
+    }
+  </script>
+</body>
+</html>
